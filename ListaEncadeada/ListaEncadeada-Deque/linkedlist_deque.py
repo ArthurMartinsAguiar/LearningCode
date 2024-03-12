@@ -10,8 +10,6 @@ def createDeque() -> deque:
 def insert_on_deque(deque: deque, value, position = 'head'):
     if position == 'end':
         deque.append(value)
-    elif position == 'middle':
-        deque.insert(value, len(list)//2)
     else:
         deque.appendleft(value)
 
@@ -19,19 +17,29 @@ def pop_from_deque(deque:deque):
     deque.pop()
 
 def main() -> None:
-    #Create a empty linkedList
-    linkedList = createDeque()
-    positions = ["head","middle","end"]
-    run = True
-    while run:
-        position = input("Where do u wanna insert: ")
-        value = input("element: ")
-        if position not in positions:
-            print("Invalid Position!")
-            continue
-        
-    insert_on_deque(linkedList, value, position)
-    print(linkedList)
+    linkedlist = createDeque()
+    positions = ["head","end"]
+    while True:
+        request = input("[Insert, Pop, Print, Finish]: ")
+        match request:
+            case "Finish":
+                break
+            case "Insert":
+                value = input("Valor a ser inserido: ")
+                position = input("[head, end]: ")
+                if position not in positions:
+                    print("Insira um posicao disponivel!")
+                insert_on_deque(linkedlist, value, position)
+            case "Pop":
+                pop_from_deque(linkedlist)
+            case "Print":
+                for i in linkedlist:
+                    print(f"{i}")
+            case _:
+                print("Opcao nao disponivel!")
+                continue
+                
+    
 
 if __name__ == "__main__":
     main()
