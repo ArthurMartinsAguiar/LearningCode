@@ -1,0 +1,4 @@
+ultimo
+penultimo
+antipenultimo
+antiantipenultimo
