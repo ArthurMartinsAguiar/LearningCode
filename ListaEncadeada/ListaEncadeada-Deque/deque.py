@@ -50,5 +50,10 @@ def main() -> None:
         print(f'Count of {i} elements: {list.count(i)}')
     print('\n')
 
+    '''
+    Caso deseje saber mais sobre deque, pesquise sua documentação...Lá tem todos os exemplos
+    e modo de uso.
+    '''
+
 if __name__ == "__main__":
     main()

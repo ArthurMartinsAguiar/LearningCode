@@ -1,7 +1,7 @@
 from collections import deque
 
 '''
-
+Criação de uma lista encadeada utilizando collections.deque
 '''
 def createDeque() -> deque:
     deque_name = deque()
@@ -39,7 +39,5 @@ def main() -> None:
                 print("Opcao nao disponivel!")
                 continue
                 
-    
-
 if __name__ == "__main__":
     main()
